@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const maxBorderRadius = 200; // Максимальный border-radius
     const minBorderRadius = 0; // Минимальный border-radius
     
+
     let slideInitialPositions = [];
     
     function initializePositions() {
@@ -21,15 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
         slides.forEach((slide, index) => {
             const overlay = slide.querySelector('.slide-overlay');
             const rect = slide.getBoundingClientRect();
-            const slideTopViewport = rect.top; 
+            const slideTopViewport = rect.top; // Позиция относительно viewport
             const slideHeight = slide.offsetHeight || windowHeight;
             const slideStartPos = slideInitialPositions[index] || (index * slideHeight);
             
             if (index === 0) {
                 slide.style.borderRadius = '0';
             } else {
+               
+                
                 let progress = 0;
                 
+               
                 const startFadeDistance = windowHeight; // Начинаем уменьшать, когда слайд на этой высоте
                 const endFadeDistance = 0; // Заканчиваем уменьшать, когда слайд прилип
                 
@@ -57,10 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     const nextSlideTop = nextRect.top;
                     
                     if (nextSlideTop < windowHeight && nextSlideTop > 0) {
-                        
+                       
                         const progress = 1 - (nextSlideTop / windowHeight);
+                        overlayOpacity = progress * 0.7; // Максимальная непрозрачность 0.7
                     } else if (nextSlideTop <= 0) {
-                        overlayOpacity = 0.7; 
+                        overlayOpacity = 0.7; // Максимальная затемненность
                     }
                 }
                 
@@ -123,7 +128,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-
+    // Touch (mobile)
+    let touchStartY = 0;
+    let touchEndY = 0;
+    const swipeThreshold = 40;
+    
+    window.addEventListener('touchstart', function(e) {
+        if (e.touches && e.touches.length > 0) {
+            touchStartY = e.touches[0].clientY;
+            touchEndY = touchStartY;
+        }
+    }, { passive: true });
+    
+    window.addEventListener('touchmove', function(e) {
+        if (e.touches && e.touches.length > 0) {
+            touchEndY = e.touches[0].clientY;
+        }
+    }, { passive: true });
+    
+    window.addEventListener('touchend', function() {
+        if (isSnapping) return;
+        const delta = touchEndY - touchStartY;
+        const idx = getCurrentSlideIndex();
+        if (Math.abs(delta) > swipeThreshold) {
+            if (delta < 0) {
+                scrollToSlide(idx + 1);
+            } else {
+                scrollToSlide(idx - 1);
+            }
+        }
+    });
     
     // Обработчик скролла с оптимизацией производительности
     let ticking = false;
