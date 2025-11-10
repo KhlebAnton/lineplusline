@@ -123,36 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Touch (mobile)
-    let touchStartY = 0;
-    let touchEndY = 0;
-    const swipeThreshold = 40;
-    
-    window.addEventListener('touchstart', function(e) {
-        if (e.touches && e.touches.length > 0) {
-            touchStartY = e.touches[0].clientY;
-            touchEndY = touchStartY;
-        }
-    }, { passive: true });
-    
-    window.addEventListener('touchmove', function(e) {
-        if (e.touches && e.touches.length > 0) {
-            touchEndY = e.touches[0].clientY;
-        }
-    }, { passive: true });
-    
-    window.addEventListener('touchend', function() {
-        if (isSnapping) return;
-        const delta = touchEndY - touchStartY;
-        const idx = getCurrentSlideIndex();
-        if (Math.abs(delta) > swipeThreshold) {
-            if (delta < 0) {
-                scrollToSlide(idx + 1);
-            } else {
-                scrollToSlide(idx - 1);
-            }
-        }
-    });
+
     
     // Обработчик скролла с оптимизацией производительности
     let ticking = false;
