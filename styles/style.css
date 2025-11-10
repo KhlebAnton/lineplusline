@@ -23,6 +23,7 @@ html {
     min-height: 100%;
     font-family: 'Pollock1CTT', serif;
     scroll-behavior: smooth;
+    background-color: #000000;
 }
 
 .header {
