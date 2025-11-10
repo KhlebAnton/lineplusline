@@ -318,12 +318,17 @@ p.slide-title {
 
         font-size: 36px;
     }
+    .slide-content {
+        width: 100%;
+    }
     .contact-info {
         flex-direction: column;
+        margin: 0 auto;
     }
     .slide-content-middle {
         margin: 0;
     }
+
     .slide-content_column-title {
         margin: 0;
 
