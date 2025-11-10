@@ -324,7 +324,7 @@ p.slide-title {
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:500px) {
     .logo_two {
         max-width: 80px;
     }
