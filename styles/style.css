@@ -1,6 +1,11 @@
 @font-face {
-    font-family: 'Pollock1CTT';
-    src: url('../fonts/pollock1ctt.eot');
+	font-family: 'Pollock1CTT';
+	src: url('../fonts/pollock1ctt.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/pollock1ctt.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/pollock1ctt.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/pollock1ctt.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/pollock1ctt.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/pollock1ctt.svg#pollock1ctt') format('svg'); /* Chrome < 4, Legacy iOS */
 }
 
 * {
