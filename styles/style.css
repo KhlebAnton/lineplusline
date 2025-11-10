@@ -318,6 +318,9 @@ p.slide-title {
 
         font-size: 36px;
     }
+    .slide-content_column-title {
+        font-size: 36px;
+    }
     .slide-content {
         width: 100%;
     }
@@ -329,10 +332,7 @@ p.slide-title {
         margin: 0;
     }
 
-    .slide-content_column-title {
-        margin: 0;
-
-    }
+    
 }
 
 @media (max-width:500px) {
@@ -354,5 +354,17 @@ p.slide-title {
     }
     .slide-content {
         padding-bottom: 140px;
+    }
+    .slide-content p {
+        font-size: 20px;
+
+    }
+
+    p.slide-title {
+
+        font-size: 26px;
+    }
+    .slide-content_column-title {
+        font-size: 28px;
     }
 }
