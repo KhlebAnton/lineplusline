@@ -120,7 +120,7 @@ html {
 
 .footer-container {
     max-width: 828px;
-    padding: 0 16px;
+    padding: 0 10px;
     margin: 0 auto;
     gap: 10px;
     display: flex;
@@ -172,7 +172,7 @@ html {
 }
 
 .slide-content {
-    padding: 177px 16px 100px;
+    padding: 177px 10px 100px;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -282,7 +282,7 @@ p.slide-title {
         gap: 10px;
         flex-direction: column;
         align-items: start;
-        padding: 10px 16px;
+        padding: 10px 10px;
 
     }
 
@@ -311,7 +311,7 @@ p.slide-title {
 
     .content_number__link {
         display: flex;
-        gap: 10px 30px;
+        gap: 10px 20px;
         flex-wrap: wrap;
     }
 
