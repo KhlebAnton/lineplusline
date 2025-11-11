@@ -94,7 +94,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../images/hearth.png') 50% / contain no-repeat;
+    background: url('../images/hearth.svg') 50% / contain no-repeat;
     z-index: 2;
 }
 
@@ -248,7 +248,7 @@ p.slide-title {
     width: 77px;
     height: 77px;
     flex-shrink: 0;
-    background: url('../images/hearth.png') 50% / contain no-repeat;
+    background: url('../images/hearth.svg') 50% / contain no-repeat;
 }
 
 .contact-items {
@@ -256,7 +256,16 @@ p.slide-title {
     flex-direction: column;
     gap: 16px;
 }
-
+.logo_one {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 36px;
+}
+.logo_one img {
+    width: 31px;
+    height: 31px;
+}
 @media (max-width:800px) {
     .header {
         top: 0px;
@@ -342,6 +351,7 @@ p.slide-title {
 
     .logo_one {
         max-width: 100px;
+        font-size: 26px;
     }
 
     .footer-container {
@@ -354,6 +364,7 @@ p.slide-title {
     }
     .slide-content {
         padding-bottom: 140px;
+        gap: 4px;
     }
     .slide-content p {
         font-size: 20px;
