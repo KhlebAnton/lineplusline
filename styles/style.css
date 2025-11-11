@@ -219,6 +219,7 @@ html {
     background-color: #fff;
     display: block;
     width: fit-content;
+    line-height: 100%;
 }
 
 p.slide-title {
