@@ -1,11 +1,20 @@
 @font-face {
-	font-family: 'Pollock1CTT';
-	src: url('../fonts/pollock1ctt.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/pollock1ctt.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/pollock1ctt.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/pollock1ctt.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/pollock1ctt.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/pollock1ctt.svg#pollock1ctt') format('svg'); /* Chrome < 4, Legacy iOS */
+    font-family: 'Pollock1CTT';
+    src: url('../fonts/pollock1ctt.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('../fonts/pollock1ctt.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('../fonts/Pollock1CTT-Regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/Pollock1CTT-Regular.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('../fonts/pollock1ctt.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../fonts/pollock1ctt.svg#pollock1ctt') format('svg');
+    /* Chrome < 4, Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -257,16 +266,19 @@ p.slide-title {
     flex-direction: column;
     gap: 16px;
 }
+
 .logo_one {
     display: flex;
     align-items: center;
     gap: 6px;
     font-size: 36px;
 }
+
 .logo_one img {
     width: 31px;
     height: 31px;
 }
+
 @media (max-width:800px) {
     .header {
         top: 0px;
@@ -328,21 +340,25 @@ p.slide-title {
 
         font-size: 36px;
     }
+
     .slide-content_column-title {
         font-size: 36px;
     }
+
     .slide-content {
         width: 100%;
     }
+
     .contact-info {
         flex-direction: column;
         margin: 0 auto;
     }
+
     .slide-content-middle {
         margin: 0;
     }
 
-    
+
 }
 
 @media (max-width:500px) {
@@ -360,13 +376,16 @@ p.slide-title {
         align-items: start;
 
     }
+
     .slide-content_column-title {
         flex-grow: 0;
     }
+
     .slide-content {
         padding-bottom: 140px;
         gap: 4px;
     }
+
     .slide-content p {
         font-size: 20px;
 
@@ -376,6 +395,7 @@ p.slide-title {
 
         font-size: 26px;
     }
+
     .slide-content_column-title {
         font-size: 28px;
     }
